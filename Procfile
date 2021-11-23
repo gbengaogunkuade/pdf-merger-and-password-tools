@@ -1,0 +1,1 @@
+web: gunicorn ogunkuade_pdf_tools.wsgi --log-file -

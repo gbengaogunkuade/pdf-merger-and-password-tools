@@ -1,0 +1,63 @@
+{% extends 'pdf_tools/base.html' %}
+
+{% block content %}
+
+    <br>
+    
+    <div class="row">
+
+        <div class="col-md-12 p-3 mt-5 bg-dark" style="font-size:18px; color:#ffffff; text-align:center;">
+            <h1 style="color:#ffffff; font-family: 'Carrois Gothic SC', sans-serif; font-weight:bold;">Online PDF Merging Tool</h1>
+        </div>
+
+
+        <div class="col-md-12 p-4" style="color:#222222; background-color:#ffffff;">
+
+            <div style="background-color: rgb(255, 255, 255); font-size:20px; text-align:center;" class="px-3">
+                Combine multiple PDF files into one single PDF document using our online tool with ease. Our tool is easy to use and FREE
+            </div>
+
+        </div>
+
+  
+        <div class="col-md-12 p-4" style="color:#222222; background-color:#ffffff;">
+
+            <div style="background-color: rgb(255, 255, 255);" class="px-3">
+                <!-- form -->
+                <form class="row g-3" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <br>
+
+                    <div class="col-md-6">File 1: {{ form.pdf_file1 }}</div>
+                    <div class="col-md-6">File 2: {{ form.pdf_file2 }}</div>
+                    <div class="col-md-6">File 3: {{ form.pdf_file3 }}</div>
+                    <div class="col-md-6">File 4: {{ form.pdf_file4 }}</div>
+                    <div class="col-md-6">File 5: {{ form.pdf_file5 }}</div>
+                    <div class="col-md-6">File 6: {{ form.pdf_file6 }}</div>
+
+                    <div class="my-2">&nbsp;</div>
+                    
+                    <div class="col-md-4"><button style="font-size:20px; width:100%;" class="btn btn-success p-2" type="submit"><i class="bi bi-union me-2"></i>Merge PDFs</button></div>
+
+                    <div class="col-md-4"><button style="font-size:20px; width:100%;" class="btn btn-danger p-2" type="reset"><i class="bi bi-x-square-fill me-2"></i>Reset</button></div>
+
+                    <div class="col-md-4"><a href="{% url 'home' %}" style="font-size:20px; width:100%;" class="btn btn-secondary p-2"><i class="bi bi-house-fill me-2"></i>Home</a></div>
+
+                </form>
+                <br>
+            </div>
+
+        </div>
+
+
+    
+
+        <div class="col-md-12 p-3 mt-1 bg-dark" style="font-size:18px; color:#ffffff; font-family: 'Pacifico', cursive; text-align:center;">
+            Designed and Developed By <span style="color:#f3e847; font-family: 'Carrois Gothic SC', sans-serif; font-size:20px;"><b>Gbenga Ogunkuade</b></span>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

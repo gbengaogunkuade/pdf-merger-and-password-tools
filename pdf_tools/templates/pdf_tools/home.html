@@ -1,0 +1,54 @@
+{% extends 'pdf_tools/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    
+    <div class="row">
+
+        <div class="col-md-12 p-3 mt-5 bg-dark" style="font-size:18px; color:#ffffff; text-align:center;">
+            <h1 style="color:#ffffff; font-family: 'Carrois Gothic SC', sans-serif; font-weight:bold;">Ogunkuade Online PDF Tools</h1>
+        </div>
+    </div>
+
+
+
+  
+        
+
+    <div class="row p-4" style="background-color:rgb(255, 255, 255);">
+
+        <div class="col-md-6 p-3" style="background-color:rgb(240, 239, 233); font-size:20px;">
+            <a style="text-decoration:none;" href="{% url 'merge_pdf' %}">
+            <div class="p-2" style="background-color:rgb(255, 255, 255);">
+            <img class="mb-2" style="width:100%;" src="{% static 'images/merge_pdf.jpg' %}">
+            </div>
+            </a>
+        </div>
+
+
+        <div class="col-md-6 p-3" style="background-color:rgb(240, 239, 233); font-size:20px;">
+            <a style="text-decoration:none;" href="{% url 'password_pdf' %}">
+            <div class="p-2" style="background-color:rgb(8, 8, 8);">
+            <img class="mb-2" style="width:100%;" src="{% static 'images/lock_pdf.jpg' %}">
+            </div>
+            </a>
+        </div>
+
+    </div>
+
+
+
+    
+    <div class="row align-items-center">
+        <div class="col-md-12 p-3 mt-1 bg-dark" style="font-size:18px; color:#ffffff; font-family: 'Pacifico', cursive; text-align:center;">
+            Designed and Developed By <span style="color:#f3e847; font-family: 'Carrois Gothic SC', sans-serif; font-size:20px;"><b>Gbenga Ogunkuade</b></span>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
